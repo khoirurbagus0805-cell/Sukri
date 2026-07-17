@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+ 	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Usus Store</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+<body>
+<header>
+<div class="logo">
+🔥 Usus Tirex Store 🔥
+</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#produk">Produk</a>
+<a href="#about">About</a>
+<div class="cart">
+🛒 Keranjang 
+<span id="jumlahCart">0</span>
+</div>
+</nav>
+</header>
+<section class="hero" id="home">
+<div>
+<h1>
+Usus Renyah Premium
+</h1>
+<p>
+Nikmati berbagai rasa favorit kamu
+</p>
+<a href="#produk">
+<button>
+Belanja Sekarang
+</button>
+</a>
+</div>
+</section>
+<section id="produk">
+<h2>
+Produk Kami
+</h2>
+<div class="produk">
+<div class="card">
+<img src="img/original.jpg">
+<h3>
+Usus Original
+</h3>
+<p>
+Rp5.000/100 g
+</p>
+<button onclick="pilihProduk('Usus Original',5000,'img/original.jpg','Original')">
+Pilih
+</button>
+</div>
+<div class="card">
+<img src="img/USUS.JPEG">
+<h3>
+Usus Balado
+</h3>
+<p>
+Rp6.000/100 g
+</p>
+<button onclick="pilihProduk('Usus Balado',6000,'img/USUS.JPEG','Balado')">
+Pilih
+</button>
+</div>
+<div class="card">
+<img src="img/keju.jpg">
+<h3>
+Usus Keju
+</h3>
+<p>
+Rp6.000/100 g
+</p>
+<button onclick="pilihProduk('Usus Keju',6000,'img/keju.jpg','Keju')">
+Pilih
+</button>
+</div>
+</div>
+</section>
+<section class="checkout">
+<h2>
+Detail Pesanan
+</h2>
+<img id="fotoPesanan"
+src="img/original.jpg">
+<h3 id="namaProduk">
+Belum memilih produk
+</h3>
+<label>
+Pilih Rasa
+</label>
+	<select id="rasa" disabled>
+		<option value="Original">
+		Original
+		</option>
+		<option value="Balado">
+		Balado
+		</option>
+		<option value="Keju">
+		Keju
+		</option>
+	</select>
+<label>
+Jumlah Barang
+</label>
+<input 
+type="number"
+id="jumlah"
+value="1"
+min="1">
+<h3 id="total">
+Total : Rp0
+</h3>
+<button onclick="masukKeranjang()">
+Tambah Keranjang
+</button>
+<label>Nama Lengkap</label>
+<input
+type="text"
+id="nama"
+placeholder="Masukkan nama lengkap">
+<label>Nomor HP</label>
+<input
+type="tel"
+id="nohp"
+placeholder="08xxxxxxxxxx">
+<label>Alamat Lengkap</label>
+<textarea
+id="alamat"
+placeholder="Masukkan alamat lengkap">
+</textarea>
+<section class="keranjang">
+</section>
+<h2>
+Keranjang Belanja 🛒
+</h2>
+<div id="listCart">
+Keranjang kosong
+</div>
+<h3 id="totalCart">
+Total : Rp0
+</h3>
+<button onclick="checkoutWA()">
+Checkout WhatsApp
+</button>
+</section>
+<section id="about" class="about">
+<h2>
+Tentang Kami
+</h2>
+<p>
+UsusStore adalah brand makanan ringan yang menghadirkan camilan renyah dengan cita rasa berkualitas. Kami menghadirkan berbagai pilihan rasa favorit seperti Original, Balado, dan Keju yang dibuat untuk menemani setiap momen santai Anda.
+
+Dengan mengutamakan rasa, kualitas bahan, dan kepuasan pelanggan, kami berkomitmen memberikan produk yang gurih, renyah, dan nikmat di setiap gigitan.
+
+Nikmati sensasi camilan premium dengan harga terjangkau bersama UsusStore — teman terbaik untuk waktu santai, berkumpul, maupun sebagai oleh-oleh untuk orang tersayang.</p>
+</section>
+<footer>
+© 2026 UsusStore
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
