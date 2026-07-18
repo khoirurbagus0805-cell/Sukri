@@ -323,3 +323,69 @@ color:#5C3317;
         width: 100%;
     }
 }
+/* ===========================
+   RESPONSIVE HP & TABLET
+=========================== */
+
+@media screen and (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        padding:15px;
+        position:relative;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+        margin-top:15px;
+    }
+
+    .logo{
+        font-size:28px;
+        text-align:center;
+    }
+
+    .hero{
+        height:500px;
+        padding:20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    button{
+        width:100%;
+        max-width:320px;
+    }
+
+    section{
+        padding:30px 15px;
+    }
+
+    .produk{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .checkout,
+    .keranjang,
+    .about{
+        width:95%;
+        padding:20px;
+    }
+
+    #fotoPesanan{
+        width:180px;
+        height:180px;
+    }
+
+}
