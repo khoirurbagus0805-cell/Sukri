@@ -281,3 +281,45 @@ text-align:center;
 margin:15px 0;
 color:#5C3317;
 }
+/* Tampilan HP */
+@media screen and (max-width: 768px){
+    header{
+        flex-direction: column;
+        padding: 15px;
+        position: relative;
+    }
+    nav{
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    nav a{
+        margin: 5px 0;
+    }
+    .hero{
+        height: auto;
+        padding: 100px 20px 60px;
+    }
+    .hero h1{
+        font-size: 32px;
+    }
+    .hero p{
+        font-size: 16px;
+    }
+    section{
+        padding: 30px 20px;
+    }
+    .checkout,
+    .keranjang,
+    .about{
+        width: 95%;
+        padding: 20px;
+    }
+    #fotoPesanan{
+        width: 180px;
+        height: 180px;
+    }
+    button{
+        width: 100%;
+    }
+}
