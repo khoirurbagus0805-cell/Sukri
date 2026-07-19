@@ -337,36 +337,73 @@ color:#5C3317;
 }
 
 @media screen and (max-width:768px){
+
+    header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px;
+        position:relative;
+        flex-wrap:wrap;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
     .menu-toggle{
         display:block;
     }
+
     nav{
         display:none;
         flex-direction:column;
         width:100%;
         text-align:center;
         background:#6B3E26;
-        padding:15px;
         margin-top:15px;
+        padding:15px;
         border-radius:10px;
     }
+
     nav.active{
         display:flex;
     }
-    header{
-        flex-wrap:wrap;
+
+    nav a{
+        margin:10px 0;
+        font-size:16px;
     }
-    .logo{
-        font-size:22px;
+
+    .cart{
+        margin-top:10px;
     }
-}
-@media screen and (max-width:768px){
 
     .hero{
         min-height:100vh;
         padding:120px 20px 50px;
-        background-size:cover;
-        background-position:center center;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .produk{
+        grid-template-columns:1fr;
+    }
+
+    .checkout,
+    .keranjang,
+    .about{
+        width:95%;
+    }
+
+    button{
+        width:100%;
     }
 
 }
