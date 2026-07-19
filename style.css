@@ -1,399 +1,241 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Times New Roman;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Times New Roman", serif;
 }
+
 body{
-background:
-linear-gradient(
-135deg,
-#6B3E26,
-#C68642
-);
+    background:linear-gradient(135deg,#6B3E26,#C68642);
 }
+
+/* HEADER */
 header{
-background:transparent;
-color:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-position:absolute;
-top:0;
-width:100%;
-z-index:10;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    color:white;
+    z-index:100;
 }
+
 .logo{
-font-size:32px;
-font-weight:bold;
-color:white;
-text-shadow:0 3px 10px black;
+    font-size:32px;
+    font-weight:bold;
+    text-shadow:0 3px 10px black;
 }
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:white;
+}
+
 nav{
-display:flex;
-align-items:center;
-gap:25px;
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
+
 nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-weight:bold;
-position:relative;
-transition:.3s;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
-/* efek hover */
-nav a:hover{
-color:#ffd27f;
-transform:translateY(-3px);
+
+.cart{
+    color:white;
+    font-weight:bold;
 }
-nav a::after{
-content:"";
-position:absolute;
-width:0;
-height:3px;
-background:#ffd27f;
-bottom:-8px;
-left:0;
-transition:.3s;
-}
-nav a:hover::after{
-width:100%;
-}
+
+/* HERO */
 .hero{
-    min-height:100vh;
+    height:650px;
     background:
-    linear-gradient(
-    rgba(0,0,0,.45),
-    rgba(0,0,0,.45)
-    ),
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
     url("BG usus.jpeg");
     background-size:cover;
     background-position:center;
-    background-repeat:no-repeat;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
     color:white;
 }
+
 .hero h1{
-font-size:55px;
-font-weight:700;
-text-shadow:
-2px 3px 10px black;
+    font-size:55px;
 }
+
 .hero p{
-font-size:20px;
-margin-top:15px;
+    margin:15px 0;
+    font-size:20px;
 }
+
+/* BUTTON */
+
 button{
-background:
-linear-gradient(
-45deg,
-#d35400,
-#8b4513
-);
-color:white;
-border:none;
-padding:14px 30px;
-border-radius:30px;
-font-size:16px;
-transition:.3s;
+    background:#b45309;
+    color:white;
+    border:none;
+    border-radius:30px;
+    padding:14px 30px;
+    cursor:pointer;
+    transition:.3s;
 }
+
 button:hover{
-transform:scale(1.08);
+    background:#8b4513;
 }
-button:hover{
-background:#5c2d0a;
-}
+
 section{
-padding:50px 8%;
+    padding:50px 8%;
 }
+
 h2{
-text-align:center;
-margin-bottom:30px;
+    text-align:center;
+    margin-bottom:30px;
 }
+
+/* PRODUK */
+
 .produk{
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    max-width:1200px;
+    margin:auto;
 }
+
 .card{
-background:white;
-padding:20px;
-border-radius:25px;
-box-shadow:
-0 15px 30px rgba(0,0,0,.15);
-transition:.3s;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
 }
-.card:hover{
-transform:translateY(-10px);
-}
+
 .card img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:20px;
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
 }
-.card img{
-width:100%;
-height:230px;
-object-fit:cover;
-border-radius:15px;
-}
+
 .checkout,
 .keranjang,
 .about{
-background:
-linear-gradient(
-135deg,
-#fff3e0,
-#ffe0b2
-);
-margin:40px auto;
-width:85%;
-padding:35px;
-border-radius:25px;
-box-shadow:
-0 15px 35px rgba(0,0,0,.2);
-border:
-2px solid rgba(139,69,19,.2);
-position:relative;
-overflow:hidden;
-}
-.checkout::before,
-.keranjang::before,
-.about::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:8px;
-background:
-linear-gradient(
-90deg,
-#8B4513,
-#D2691E,
-#FFB347
-);
-}
-#fotoPesanan{
-border-radius:20px;
-box-shadow:
-0 10px 20px rgba(0,0,0,.25);
-transition:.3s;
-}
-#fotoPesanan:hover{
-transform:scale(1.05);
-}
-#fotoPesanan{
-width:250px;
-height:250px;
-object-fit:cover;
-border-radius:20px;
-}
-select,input{
-width:100%;
-padding:12px;
-margin:10px 0;
-}
-textarea{
-width:100%;
-padding:12px;
-border:1px solid #ccc;
-border-radius:10px;
-resize:none;
-margin-bottom:15px;
-font-size:16px;
-}
-.item{
-background:white;
-padding:20px;
-margin:15px 0;
-border-radius:15px;
-box-shadow:
-0 5px 15px rgba(0,0,0,.1);
-transition:.3s;
-}
-.item:hover{
-transform:translateY(-5px);
-}
-.about p{
-font-size:18px;
-line-height:1.8;
-text-align:center;
-color:#5c3317;
-}
-footer{
-background:#222;
-color:white;
-padding:30px;
-text-align:center;
-}
-/*FORM DATA PEMBELI*/
-.checkout label{
-    display:block;
-    margin-top:15px;
-    margin-bottom:8px;
-    font-weight:bold;
-    color:#5C3317;
-    font-size:16px;
-}
-.checkout input,
-.checkout select,
-.checkout textarea{
-    width:100%;
-    padding:12px 15px;
-    margin-bottom:15px;
-    border:2px solid #d2b48c;
-    border-radius:12px;
-    background:#fffaf5;
-    font-size:16px;
-    transition:0.3s;
-    box-sizing:border-box;
+    width:85%;
+    margin:40px auto;
+    background:#fff3e0;
+    padding:30px;
+    border-radius:20px;
 }
 
-.checkout input:focus,
-.checkout select:focus,
-.checkout textarea:focus{
-    border-color:#8B4513;
-    background:white;
-    box-shadow:0 0 10px rgba(139,69,19,.3);
-    outline:none;
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
 }
-.checkout textarea{
-    min-height:100px;
+
+textarea{
     resize:vertical;
 }
-.checkout{
-backdrop-filter:blur(10px);
+
+#fotoPesanan{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
 }
-.checkout h2{
-color:#8B4513;
-font-size:30px;
-margin-bottom:25px;
-}
-.checkout h3{
-text-align:center;
-margin:15px 0;
-color:#5C3317;
-}
-@media screen and (max-width:768px){
-    header{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:15px;
-        position:absolute;
-        width:100%;
-    }
-    .logo{
-        font-size:18px;
-    }
-    nav{
-        display:flex;
-        flex-direction:row;
-        gap:8px;
-        align-items:center;
-    }
-    nav a{
-        margin:0;
-        font-size:13px;
-    }
-    .cart{
-        font-size:13px;
-    }
-    .hero{
-        min-height:100vh;
-        padding:120px 20px 40px;
-    }
-    .hero h1{
-        font-size:30px;
-    }
-    .hero p{
-        font-size:16px;
-    }
-    .produk{
-        grid-template-columns:1fr;
-    }
-    .checkout,
-    .keranjang,
-    .about{
-        width:95%;
-    }
-    button{
-        width:100%;
-    }
-}
-.menu-toggle{
-    display:none;
-    font-size:30px;
+
+footer{
+    background:#222;
     color:white;
-    cursor:pointer;
+    text-align:center;
+    padding:25px;
 }
+
+/* =====================
+   RESPONSIVE HP
+===================== */
 
 @media screen and (max-width:768px){
-    header{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:15px;
-        position:relative;
-        flex-wrap:wrap;
-    }
-    .logo{
-        font-size:20px;
-    }
-    .menu-toggle{
-        display:block;
-    }
-    nav{
-        display:none;
-        flex-direction:column;
-        width:100%;
-        text-align:center;
-        background:#6B3E26;
-        margin-top:15px;
-        padding:15px;
-        border-radius:10px;
-    }
-    nav.active{
-        display:flex;
-    }
-    nav a{
-        margin:10px 0;
-        font-size:16px;
-    }
-    .cart{
-        margin-top:10px;
-    }
-   .hero{
-        min-height:100vh;
-        padding:120px 20px 50px;
-        background-size:cover;
-        background-position:center center;
-    }
 
+header{
+    position:relative;
+    flex-wrap:wrap;
+    padding:15px;
 }
-    .hero h1{
-        font-size:32px;
-    }
-    .hero p{
-        font-size:16px;
-    }
-    .produk{
-        grid-template-columns:1fr;
-    }
-    .checkout,
-    .keranjang,
-    .about{
-        width:95%;
-    }
-    button{
-        width:100%;
-    }
+
+.logo{
+    font-size:22px;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+nav{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    background:#6B3E26;
+    margin-top:15px;
+    border-radius:10px;
+    padding:15px;
+}
+
+nav.active{
+    display:flex;
+}
+
+nav a{
+    margin:8px 0;
+}
+
+.hero{
+    min-height:100vh;
+    padding:120px 20px 50px;
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.produk{
+    grid-template-columns:1fr;
+}
+
+.card img{
+    height:220px;
+}
+
+.checkout,
+.keranjang,
+.about{
+    width:95%;
+}
+
+button{
+    width:100%;
+}
+
+#fotoPesanan{
+    width:180px;
+    height:180px;
+}
+
 }
