@@ -371,10 +371,14 @@ color:#5C3317;
     .cart{
         margin-top:10px;
     }
-    .hero{
+   .hero{
         min-height:100vh;
         padding:120px 20px 50px;
+        background-size:cover;
+        background-position:center center;
     }
+
+}
     .hero h1{
         font-size:32px;
     }
@@ -392,14 +396,4 @@ color:#5C3317;
     button{
         width:100%;
     }
-}
-@media screen and (max-width:768px){
-
-    .hero{
-        min-height:100vh;
-        padding:120px 20px 50px;
-        background-size:cover;
-        background-position:center center;
-    }
-
 }
