@@ -62,20 +62,21 @@ nav a:hover::after{
 width:100%;
 }
 .hero{
-height:650px;
-background:
-linear-gradient(
-rgba(0,0,0,.45),
-rgba(0,0,0,.45)
-),
-url("BG usus.jpeg");
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
+    min-height:100vh;
+    background:
+    linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45)
+    ),
+    url("BG usus.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
 }
 .hero h1{
 font-size:55px;
@@ -358,4 +359,14 @@ color:#5C3317;
     .logo{
         font-size:22px;
     }
+}
+@media screen and (max-width:768px){
+
+    .hero{
+        min-height:100vh;
+        padding:120px 20px 50px;
+        background-size:cover;
+        background-position:center center;
+    }
+
 }
