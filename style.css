@@ -282,7 +282,6 @@ margin:15px 0;
 color:#5C3317;
 }
 @media screen and (max-width:768px){
-
     header{
         display:flex;
         justify-content:space-between;
@@ -291,52 +290,72 @@ color:#5C3317;
         position:absolute;
         width:100%;
     }
-
     .logo{
         font-size:18px;
     }
-
     nav{
         display:flex;
         flex-direction:row;
         gap:8px;
         align-items:center;
     }
-
     nav a{
         margin:0;
         font-size:13px;
     }
-
     .cart{
         font-size:13px;
     }
-
     .hero{
         min-height:100vh;
         padding:120px 20px 40px;
     }
-
     .hero h1{
         font-size:30px;
     }
-
     .hero p{
         font-size:16px;
     }
-
     .produk{
         grid-template-columns:1fr;
     }
-
     .checkout,
     .keranjang,
     .about{
         width:95%;
     }
-
     button{
         width:100%;
     }
+}
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
 
+@media screen and (max-width:768px){
+    .menu-toggle{
+        display:block;
+    }
+    nav{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        text-align:center;
+        background:#6B3E26;
+        padding:15px;
+        margin-top:15px;
+        border-radius:10px;
+    }
+    nav.active{
+        display:flex;
+    }
+    header{
+        flex-wrap:wrap;
+    }
+    .logo{
+        font-size:22px;
+    }
 }
